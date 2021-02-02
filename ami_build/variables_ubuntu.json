@@ -1,0 +1,11 @@
+{
+  "source_ami": "ami-064ab8637cf33f1bb",
+  "ami_name": "example-Ubuntu18.04-AMI",
+  "sda_device_name": "/dev/sda1",
+  "sda_volume_size": "15",
+  "sdb_device_name": "/dev/sdb",
+  "sdb_volume_size": "50",
+  "sdc_device_name" :"/dev/sdc",
+  "sdc_no_device": "true",
+  "output": "ubuntu_manifest.json"
+}

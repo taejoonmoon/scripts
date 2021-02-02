@@ -1,0 +1,32 @@
+{
+  "variables": {
+        "aws_region": "ap-northeast-2",
+        "aws_ami_name": "example-Ubuntu18.04-AMI-{{isotime \"20060102\"}}-{{timestamp}}",
+        "source_ami": "ami-064ab8637cf33f1bb"
+    },
+  "builders": [
+    {
+        "type": "amazon-ebs",
+        "region": "{{user `aws_region`}}",
+        "instance_type": "t2.micro",
+        "ssh_username": "ubuntu",
+        "ami_name": "{{user `aws_ami_name`}}",
+        "ami_description": "Customized ubuntu Linux",
+        "associate_public_ip_address": "true",
+        "source_ami": "{{user `source_ami`}}",
+         "tags": {
+             "Name": "{{user `aws_ami_name`}}",
+             "Owner": "taejoon",
+             "Organization": "BSG"
+        }
+    }
+  ],
+   "post-processors": [
+   {
+     "type": "manifest",
+     "output": "ami_result-{{isotime \"20060102\"}}-{{timestamp}}.json",
+     "strip_path": true
+   }
+ ]
+
+}
