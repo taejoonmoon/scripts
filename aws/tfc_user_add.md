@@ -1,8 +1,3 @@
-https://app.asana.com/0/search/1199385493958743/1198985888197751/f
-
-
-1. 사전조건 : iam user생성을 위해서는 admin 권한이 필요하다. 
-AWS SSO의 해당 AWS account -> Command line or programmtic access 에서 credentials를 생성하면 임시 token을 이용하여 AWS에 api로 전급할 수 있다.
 1. 사전조건 : iam user생성을 위해서는 admin 권한이 필요하다. 
 AWS SSO의 해당 AWS account -> Command line or programmtic access 에서 credentials를 생성하면 임시 token을 이용하여 AWS에 api로 전급할 수 있다.
 https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-configure-envvars.html?icmpid=docs_sso_user_portal
