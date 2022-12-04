@@ -2,7 +2,7 @@
 # https://github.com/google-github-actions/auth#setup
 
 ## env
-project="sample-gw-dev-324106"
+project="sample-gw-dev-000000"
 project_number=`gcloud projects describe $project --format='value(projectNumber)'`
 
 # bucket_for_github
@@ -23,7 +23,7 @@ gsutil iam ch serviceAccount:$service_account@$project.iam.gserviceaccount.com:o
 
 
 ##
-#export PROJECT_ID="sample-gw-dev-324106"
+#export PROJECT_ID="sample-gw-dev-000000"
 
 # Enable the IAM Credentials API:
 gcloud services enable iamcredentials.googleapis.com 

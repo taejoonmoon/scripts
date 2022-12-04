@@ -3,7 +3,7 @@
 REGION="asia-northeast3"
 ZONE="$REGION-a"
 HOST_PROJECT="sample-gw-shared-vpc"
-PROJECT="sample-gw-dev-324106"
+PROJECT="sample-gw-dev-000000"
 
 roles="roles/compute.networkViewer
 roles/compute.viewer
@@ -19,7 +19,7 @@ add_user_roles() {
     for role in $roles
     do
         #echo $role
-        #gcloud projects add-iam-policy-binding sample-gw-dev-324106 --member=user:sample.gcp.lab@gmail.com --role=roles/viewer
+        #gcloud projects add-iam-policy-binding sample-gw-dev-000000 --member=user:sample.gcp.lab@gmail.com --role=roles/viewer
         echo "gcloud projects add-iam-policy-binding $PROJECT --member=$member --role=$role"
     done
 }
@@ -56,7 +56,7 @@ delete_user_roles() {
 }
 
 #member="user:sample.gcp.lab@gmail.com"
-#member="serviceAccount:sample-web-general-sa@sample-gw-dev-324106.iam.gserviceaccount.com"
+#member="serviceAccount:sample-web-general-sa@sample-gw-dev-000000.iam.gserviceaccount.com"
 member=$1
 action=$2
 
