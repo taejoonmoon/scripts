@@ -1,11 +1,9 @@
-# vntg.gcp.lab@gmail.com 
-
 #!/bin/bash
 
 REGION="asia-northeast3"
 ZONE="$REGION-a"
-HOST_PROJECT="vntg-gw-shared-vpc"
-PROJECT="vntg-gw-dev-324106"
+HOST_PROJECT="sample-gw-shared-vpc"
+PROJECT="sample-gw-dev-324106"
 
 roles="roles/compute.networkViewer
 roles/compute.viewer
@@ -21,7 +19,7 @@ add_user_roles() {
     for role in $roles
     do
         #echo $role
-        #gcloud projects add-iam-policy-binding vntg-gw-dev-324106 --member=user:vntg.gcp.lab@gmail.com --role=roles/viewer
+        #gcloud projects add-iam-policy-binding sample-gw-dev-324106 --member=user:sample.gcp.lab@gmail.com --role=roles/viewer
         echo "gcloud projects add-iam-policy-binding $PROJECT --member=$member --role=$role"
     done
 }
@@ -57,8 +55,8 @@ delete_user_roles() {
 
 }
 
-#member="user:vntg.gcp.lab@gmail.com"
-#member="serviceAccount:vntg-web-general-sa@vntg-gw-dev-324106.iam.gserviceaccount.com"
+#member="user:sample.gcp.lab@gmail.com"
+#member="serviceAccount:sample-web-general-sa@sample-gw-dev-324106.iam.gserviceaccount.com"
 member=$1
 action=$2
 
@@ -98,5 +96,5 @@ esac
 #fi
 
 #add_user_roles $member
-#check_user_roles user:vntg.gcp.lab@gmail.com
+#check_user_roles user:sample.gcp.lab@gmail.com
 #delete_user_roles $member

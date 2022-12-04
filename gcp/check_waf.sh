@@ -7,7 +7,7 @@
 #jsonPayload.previewSecurityPolicy.outcome="DENY"
 #jsonPayload.enforcedSecurityPolicy.outcome="ACCEPT"
 
-PROJECT="vntg-gw-dev-324106"
+PROJECT="sample-gw-dev-324106"
 
 file=$1
 

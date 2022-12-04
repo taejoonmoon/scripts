@@ -2,11 +2,11 @@
 # https://github.com/google-github-actions/auth#setup
 
 ## env
-project="vntg-gw-dev-324106"
+project="sample-gw-dev-324106"
 project_number=`gcloud projects describe $project --format='value(projectNumber)'`
 
 # bucket_for_github
-bucket_for_github="vntg-gw-tm-operation-dev"
+bucket_for_github="sample-gw-tm-operation-dev"
 
 
 ## create service account 
@@ -23,7 +23,7 @@ gsutil iam ch serviceAccount:$service_account@$project.iam.gserviceaccount.com:o
 
 
 ##
-#export PROJECT_ID="vntg-gw-dev-324106"
+#export PROJECT_ID="sample-gw-dev-324106"
 
 # Enable the IAM Credentials API:
 gcloud services enable iamcredentials.googleapis.com 
@@ -55,7 +55,7 @@ gcloud iam workload-identity-pools providers create-oidc "$provider_name" \
   --issuer-uri="https://token.actions.githubusercontent.com"
   
 # Allow authentications from the Workload Identity Provider originating from your repository to impersonate the Service Account created above:
-export REPO="VntgCorp/gcp_operations"
+export REPO="sample/gcp_operations"
 
 gcloud iam service-accounts add-iam-policy-binding "$service_account_full_name" \
   --role="roles/iam.workloadIdentityUser" \
